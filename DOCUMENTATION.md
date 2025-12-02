@@ -48,13 +48,13 @@ This command creates a new Next.js application with specific configurations. Her
 
 npx - Node Package Manager, used to run the command
 create-next-app@latest - Uses the latest version of Next.js's official scaffolding tool to generate a new project
-portfolio - Names your project "portfolio" (this will be the folder name)
+portfolio - Names project "portfolio" (this will be the folder name)
 --typescript - Sets up the project with TypeScript instead of plain JavaScript
 --tailwind - Preconfigures Tailwind CSS for styling
 
 These are configuration prompts that appeared when we ran the create-next-app command. These let you customize the Next.js project setup (screenshot at the bottom):
 
-✔ Which linter would you like to use? › ESLint - Asks which code linting tool to use. ESLint checks your code for errors and style issues. You selected ESLint (the standard choice).
+✔ Which linter would you like to use? › ESLint - Asks which code linting tool to use. ESLint checks the code for errors and style issues. You selected ESLint (the standard choice).
 ✔ Would you like to use React Compiler? … No / Yes - Asks if you want to enable React's experimental compiler for automatic optimization. This is a newer feature.
 ✔ Would you like your code inside a src/ directory? … No / Yes - Asks if you want your application code organized in a src/ folder (more structured) or at the root level (simpler structure).
 ✔ Would you like to use App Router? (recommended) … No / Yes - Asks which routing system to use. App Router is Next.js's newer, more powerful routing system (vs. the older Pages Router).
@@ -62,7 +62,7 @@ These are configuration prompts that appeared when we ran the create-next-app co
 
 The last line:
 Creating a new Next.js app in /Users/travonmayo/Documents/portfolio-projects/amplify-portfolio-nextjs/portfolio.
-This confirms where your project is being created on your computer - in the portfolio folder at that file path.
+This confirms where the project is being created on the computer - in the portfolio folder at that file path.
 
 ![nextjs-app-setup](screenshots/nextjs-app-setup.png)
 
@@ -91,7 +91,7 @@ npm run dev
 
 **🚨IMPORTANT🚨**
 - Ensure that you move to the correct directory or else you will get an error.
-- To change to your 'portfolio' directory run:
+- To change to the 'portfolio' directory run:
 ```bash
 cd portfolio
 ```
@@ -287,7 +287,7 @@ When clicking on the token additional details showup, other tabs are available f
 ### Define CDK Infrastructure As Code (IAC)
 
 This CDK code creates an AWS Amplify application that:
-Connects to your GitHub repository
+Connects to the GitHub repository
 Automatically builds the Next.js portfolio when you push code
 Deploys the built static files to Amplify hosting
 Code is contanerized by AWS Codebuild and executed
@@ -303,13 +303,13 @@ import * as amplify from '@aws-cdk/aws-amplify-alpha';
 // Imports AWS Amplify constructs - provides the tools to create Amplify apps and configurations
 
 import * as codebuild from 'aws-cdk-lib/aws-codebuild';
-// Imports AWS CodeBuild library - used to define build specifications for compiling your app
+// Imports AWS CodeBuild library - used to define build specifications for compiling the app
 
 import { Construct } from 'constructs';
 // Imports Construct class - the base class for all CDK constructs (building blocks)
 
 export class PortfolioInfrastructureStack extends cdk.Stack {
-// Defines your infrastructure stack class - extends (inherits from) the base CDK Stack class
+// Defines the infrastructure stack class - extends (inherits from) the base CDK Stack class
 
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
   // Constructor function that runs when the stack is created
@@ -327,21 +327,21 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
     // - 'PortfolioApplication' is the logical ID in CloudFormation
 
       appName: 'Portfolio',
-      // Sets the display name for your Amplify app in the AWS console
+      // Sets the display name for the Amplify app in the AWS console
 
       // Connect to my github repo
       sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
       // Configures GitHub as the source code provider
 
         owner: 'vonongit',
-        // Your GitHub username
+        // My GitHub username
 
         repository: 'Amplify-Portfolio',
-        // The name of your GitHub repository
+        // The name of my GitHub repository
 
         oauthToken: cdk.SecretValue.secretsManager('github-token')
         // Retrieves the GitHub personal access token from AWS Secrets Manager
-        // This token allows Amplify to access your private repository
+        // This token allows Amplify to access my private repository
       }),
 
       // Build Specification
@@ -380,7 +380,7 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
                 // Prints a message to the build log
 
                 'npm run build-and-export',
-                // Runs the custom script to build and export your Next.js app
+                // Runs the custom script to build and export my Next.js app
 
                 'echo "build is completed"'
                 // Prints completion message to the build log
@@ -506,7 +506,7 @@ npm error   npm run
 
 **✅ THE SOLUTION: Add the Build Script ✅**
 
-**1. Navigate to Navigate to your portfolio project (the Next.js app, not the CDK infrastructure)**
+**1. Navigate to the portfolio project (the Next.js app, not the CDK infrastructure)**
 ```bash 
 cd ~/Documents/portfolio-projects/amplify-portfolio-nextjs/portfolio
 ```
@@ -563,7 +563,7 @@ Select the option that says "Register a Domain"
 
 **2. Check Domain Availability**
 
-Search for your desired domain name, I wanted to use "travonsportfolio.com", this was priced at $15/year. This is a great value for a low traffic site that will need to run for a long time.
+Search for the desired domain name, I wanted to use "travonsportfolio.com", this was priced at $15/year. This is a great value for a low traffic site that will need to run for a long time.
 
 ![Route53-DomainAvailability](screenshots/Route53-DomainAvailability.png)
 
@@ -571,13 +571,13 @@ After purchasing it will take a couple minutes to create the domain, you can che
 
 **3. View Hosted Zone**
 
-A hosted Zone has also been created, A hosted zone is basically a container for DNS records that tells the internet how to find your website. 
+A hosted Zone has also been created, A hosted zone is basically a container for DNS records that tells the internet how to find my website. 
 
 **When someone types travonsportfolio.com into their browser:**
 
 Browser asks: "Where is travonsportfolio.com?"
 Route 53 hosted zone answers: "It's at Amplify's servers!"
-Browser connects to Amplify and loads your site
+Browser connects to Amplify and loads the site
 
 The hosted zone stores all the DNS records that make this possible.
 
@@ -602,7 +602,7 @@ The hosted zone stores all the DNS records that make this possible.
 - I chose to check the box for the option "setup redirect from https://travonsportfolio.com to https://www.travonsportfolio.com"
 - Lastly click the button "Add Domain"
 
-**Add Your Domain**
+**Add the Domain**
 - Click the "Add domain" button (orange button in top right)
 - Select "Use a Route 53 domain"
 - From the dropdown, select "travonsportfolio.com"
@@ -656,9 +656,11 @@ Load time was fast regardless if I tested out the site with a laptop or a mobile
 - Auto-renewal enabled
 
 **In Amplify App:**
-- Mapped domain to your main branch
+- Mapped domain to the main branch
 - Enabled HTTPS redirect
 - Connected CloudFront distribution
+
+![Route53-HostedZone](screenshots/Route53-HostedZone.png)
 
 ---
 
@@ -670,14 +672,14 @@ Route 53 Hosted Zone (DNS lookup)
     ↓
 CloudFront Distribution (CDN)
     ↓
-AWS Amplify (Your site)
+AWS Amplify (My site)
     ↓
 Next.js Portfolio Loads! 🎉
 ```
 
 
 # 💰 Total Cost 📊:
-For 1 hosted zone with your domain:
+For 1 hosted zone with my domain:
 
 Domain registration: $13/year (one-time annual)
 Hosted zone: $6/year ($0.50/month)
@@ -686,7 +688,6 @@ Security features: $0 (included free)
 
 **Grand Total: ~approx $19/year for AWS-managed DNS**
 
-![Route53-HostedZone](screenshots/Route53-HostedZone.png)
 
 # Conclusion
 
