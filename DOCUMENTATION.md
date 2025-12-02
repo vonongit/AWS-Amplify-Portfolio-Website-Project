@@ -108,17 +108,17 @@ cd portfolio
 
 - Next, I must create a front-end UI development to make the landing page appealing to the audience. Since I am not a front end developer, I asked myself what would be a unique way to have acheive our task of creating a front end despite my minimal experience with such a skill?
 
-- I decided to adapt with the times and ask AI for some assistance with creating a front end UI for my site. While there are many AI options to use, but I decided to use Claude to acheive this. Although AI is being used, it is myself that is still creating and managing the infrastructure for the site. Without my knowledge of building the infrastructure, this UI is practically usless as it would have nothing to host it or ensure that users can access it. I think this is a great example of how to use AI as a tool rather than relying on AI.
+- I decided to ask AI for some assistance with creating a front end UI for my site. While there are many AI options to use, I decided to use Claude to acheive this. This method of creating the frontend not only saves time, but is more effecient with creating a worthy portfolio site since I have no web development experience.
 
 **Updating the page.tsx template***
 
 - After generating a new template for the portfolio site, I personalized the site to highlight my projects and skills. once the changes to the template were saved, the local host automatically updates witht the changes made. It now shows my name, a short bio about myself, projects that I've done and Links to connect with me on Github, LinkedIn and Gmail.
 
-![localhost-updated-site](screenshots/localhost-updated-site.png)
+![localhost-site-updated](screenshots/localhost-site-updated.png)
 
 ### Setup Github repository
 
-- I created a new github repository and decided to name it 'Amplify-Portfolio', When we push our code to Github, it will automatically deploy the code to AWS Amplify, which will then deploy the resources into the infrastructure that Amplify creates. AWS Amplify will need access to this repository to our IAC, and in order for it to do that we must give Amplify access to the repository.
+- I created a new github repository and decided to name it 'Amplify-Portfolio', When we push our code to Github, it will automatically deploy the code to AWS Amplify, which will then use AWS Codebuild to containerize the pipeline and deploy the resources into the infrastructure that Amplify creates. AWS Amplify will need access to this repository to our IAC, and in order for it to do that we must give Amplify access to the repository.
 
 - To give Amplify access to the repo, I created Github personal access tokens. To create these tokens, you:
 
@@ -288,9 +288,10 @@ When clicking on the token additional details showup, other tabs are available f
 
 This CDK code creates an AWS Amplify application that:
 Connects to your GitHub repository
-Automatically builds your Next.js portfolio when you push code
+Automatically builds the Next.js portfolio when you push code
 Deploys the built static files to Amplify hosting
-Uses caching to speed up subsequent builds utilizes Amplify which automaWe 
+Code is contanerized by AWS Codebuild and executed
+Uses caching that stores previous/familiar actions and reuses it to speed up subsequent builds utilizes Amplify which automaWe 
 
 We have built the below CDK code:
 
@@ -634,9 +635,12 @@ The following statuses will show:
 **Test in browser:**
 https://travonsportfolio.com
 https://www.travonsportfolio.com
-```
 
-Both should load the portfolio! 🎉
+![portfolio-deploy-success](screenshots/portfolio-deploy-success.png)
+
+Here you can see that we have successfully connected our Amplify app with the domain name from Route 53 which is reachanable through our main branch on AWS Amplify. Users who search https://travonsportfolio.com or https://www.travonsportfolio.com will be directed to the correct portfolio site regardless or whcich URL that they choose. 
+
+Load time was fast regardless if I tested out the site with a laptop or a mobile device, I also had friends and family test out the site to see if they could connect and this was successful 100%, this site is ready to be shared with the public.
 
 ---
 
@@ -669,6 +673,7 @@ CloudFront Distribution (CDN)
 AWS Amplify (Your site)
     ↓
 Next.js Portfolio Loads! 🎉
+```
 
 
 # 💰 Total Cost 📊:

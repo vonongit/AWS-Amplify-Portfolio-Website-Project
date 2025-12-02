@@ -793,7 +793,7 @@ export default function Home() {
               <span className="project-status">✓ Completed</span>
             </div>
             <div className="project-body">
-              <p>Serverless portfolio website using Next.js, S3, CloudFront, and AWS CDK. Implemented secure origin access, HTTPS encryption, and automated deployment pipelines.</p>
+              <p>Serverless portfolio website using Next.js, S3, CloudFront, and Route 53 using AWS CDK. Ensured secure origin access with CloudFront, HTTPS encryption, and automated deployment pipelines with GitHub and Amplify.</p>
               
               <div className="project-metrics">
                 <div className="metric">
@@ -814,6 +814,7 @@ export default function Home() {
                 <span className="tech-badge-advanced">Next.js</span>
                 <span className="tech-badge-advanced">S3</span>
                 <span className="tech-badge-advanced">CloudFront</span>
+                <span className="tech-badge-advanced">Route 53</span>
                 <span className="tech-badge-advanced">CDK</span>
               </div>
 
@@ -839,6 +840,7 @@ export default function Home() {
             <ul className="skill-list-advanced">
               <li>AWS S3</li>
               <li>CloudFront</li>
+              <li>Route 53</li>
               <li>AWS IAM</li>
               <li>Lambda</li>
             </ul>
