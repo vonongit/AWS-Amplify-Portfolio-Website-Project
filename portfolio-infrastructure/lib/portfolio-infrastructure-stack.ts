@@ -38,7 +38,7 @@ export class PortfolioInfrastructureStack extends cdk.Stack {
         owner: 'vonongit',
         // Your GitHub username
 
-        repository: 'Amplify-Portfolio',
+        repository: 'AWS-Amplify-Portfolio-Website-Project',
         // The name of your GitHub repository
 
         oauthToken: cdk.SecretValue.secretsManager('github-token')
