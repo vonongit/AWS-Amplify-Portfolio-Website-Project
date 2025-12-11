@@ -35,6 +35,7 @@ This project demonstrates building and deploying a production-ready portfolio we
 | **Infrastructure** | AWS Amplify, AWS CDK, AWS Secrets Manager |
 | **CI/CD** | GitHub, AWS CodeBuild |
 | **Deployment** | Automated via Amplify with CloudFront CDN |
+| **Accessibility** | Registerd with public domain name using Route 53 |
 
 ## 💡 What I Learned
 

@@ -1,3 +1,19 @@
+> Complete guide to deploying a Next.js portfolio with AWS Amplify, CDK, and Route 53
+
+[![Live Site](https://img.shields.io/badge/Live-travonsportfolio.com-brightgreen?style=for-the-badge)](https://travonsportfolio.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Source%20Code-181717?style=for-the-badge&logo=github)](https://github.com/vonongit/AWS-Amplify-Portfolio-Website-Project)
+
+---
+
+## 📋 Table of Contents
+
+### Overview
+- [Architecture Diagram](#architecture-diagram)
+- [Current Situation & Challenge](#current-situationchallenge-faced)
+- [Project Goals](#goal)
+- [What You'll Learn](#will-learn)
+- [Tasks Overview](#tasks)
+
 # Architecture Diagram
 
 ![architecture-diagram](screenshots/architecture-diagram.png)
@@ -353,14 +369,14 @@ aws secretmanager create-secret --name github-token --description "github token 
 
 ## Define CDK Infrastructure As Code (IAC)
 
-```
+
 This CDK code creates an AWS Amplify application that:
 - Connects to the GitHub repository
 - Automatically builds the Next.js portfolio when you push code
 - Deploys the built static files to Amplify hosting
 - Code is contanerized by AWS Codebuild and executed
 - Uses caching that stores previous/familiar actions and reuses it to speed up subsequent builds utilizes Amplify which automaWe 
-```
+
 
 
 We have built the below CDK code:
