@@ -69,6 +69,46 @@
 
 ---
 
+---
+
+## 🎯 Quick Setup Guide
+
+**For experienced developers who want the TL;DR:**
+```bash
+# 1. Create Next.js app
+npx create-next-app@latest portfolio --typescript --tailwind
+
+# 2. Initialize CDK
+mkdir portfolio-infrastructure && cd portfolio-infrastructure
+cdk init app --language typescript
+
+# 3. Install Amplify dependencies
+npm install @aws-cdk/aws-amplify-alpha aws-cdk-lib@latest
+
+# 4. Store GitHub token
+aws secretsmanager create-secret --name github-token --secret-string "YOUR_TOKEN"
+
+# 5. Deploy infrastructure
+cdk bootstrap
+cdk deploy
+
+# 6. Configure domain in Amplify Console
+```
+
+**⚠️ New to this?** Follow the [detailed walkthrough below](#1-setting-up-nextjs-project) ⬇️
+
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+- ✅ AWS Account with CLI configured
+- ✅ Node.js and npm installed
+- ✅ AWS CDK CLI installed (`npm install -g aws-cdk`)
+- ✅ GitHub account
+- ✅ Basic understanding of TypeScript and React
+
+---
 
 # Architecture Diagram
 
