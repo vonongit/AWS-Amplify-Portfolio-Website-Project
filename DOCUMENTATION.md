@@ -14,6 +14,62 @@
 - [What You'll Learn](#will-learn)
 - [Tasks Overview](#tasks)
 
+### 🚀 Quick Start
+- [Prerequisites](#prerequisites)
+- [Quick Setup Guide](#quick-setup-guide)
+
+### Part 1: Next.js Setup
+- [1. Setting Up Next.js Project](#1-setting-up-nextjs-project)
+  - [Create Project Folder](#1-create-project-folder)
+  - [Create Next.js Application](#2-create-nextjs-application)
+  - [Understanding the Command](#this-command-creates-a-new-nextjs-application-with-specific-configurations-heres-what-each-part-does)
+  - [Configuration Prompts](#these-are-configuration-prompts-that-appeared-when-we-ran-the-create-next-app-command-these-let-you-customize-the-nextjs-project-setup-screenshot-at-the-bottom)
+  - [Project Structure](#what-this-created)
+  - [Running the Application](#run-the-app)
+  - [View Results](#results-of-npm-run-dev)
+  - [Customizing the UI](#updating-the-pagetsx-template)
+  - [GitHub Repository Setup](#setup-github-repository)
+  - [Pushing Code to GitHub](#5-push-portfolio-directory-to-github)
+
+### Part 2: Infrastructure Setup
+- [2. Setting Up CDK Infrastructure](#2-setting-up-the-cdk-infrastructure-and-secrets-manager)
+  - [Create Infrastructure Directory](#create-a-new-directory)
+  - [Initialize CDK](#initiate-cdk-in-terminal)
+  - [Understanding CDK Structure](#new-folders-created-from-the-init)
+  - [Install Dependencies](#install-additional-packages)
+  - [Troubleshooting: Version Conflict](#error)
+  - [Configure GitHub Token](#configure-github-token)
+  - [Store Token in Secrets Manager](#2-create-secret-with-aws-secret-manager)
+  - [Define Infrastructure Code](#define-cdk-infrastructure-as-code-iac)
+
+### Part 3: Deployment
+- [3. Test and Deploy](#3-test-and-deploy)
+  - [Deploy CDK Stack](#2-deploy-cdk-infrastructure)
+  - [Troubleshooting: Incorrect Naming](#error-1)
+  - [Check Amplify Console](#3-check-project-on-amplify)
+  - [Migration Required](#-issue-)
+  - [First Build Attempt](#-error--1)
+  - [Adding Build Script](#-the-solution-add-the-build-script-)
+  - [Successful Deployment](#re-run-the-code)
+
+### Part 4: Domain Configuration
+- [Register Domain with Route 53](#register-domain-name-with-route-53)
+  - [Access Route 53](#1-go-to-route-53)
+  - [Check Domain Availability](#2-check-domain-availability)
+  - [Hosted Zone Overview](#3-view-hosted-zone)
+  - [Connect Domain to Amplify](#4-connect-domain-with-amplify)
+  - [Verify Setup](#5-test-domain-in-the-browser)
+  - [Behind the Scenes](#what-amplify-just-did-behind-the-scenes)
+
+### Project Summary
+- [💰 Total Cost Breakdown](#-total-cost-)
+- [Conclusion](#conclusion)
+- [Future Considerations](#future-considerations)
+- [🤝 Connect With Me](#-connect-with-me)
+
+---
+
+
 # Architecture Diagram
 
 ![architecture-diagram](screenshots/architecture-diagram.png)
