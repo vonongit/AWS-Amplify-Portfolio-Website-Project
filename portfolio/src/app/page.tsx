@@ -787,7 +787,48 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 3 - AWS Portfolio Website */}
+          {/* Project 3 - Docker Sports & News Dashboard */}
+          <div className="project-card-advanced">
+            <div className="project-header">
+              <span className="project-number">03</span>
+              <h3>Docker Sports & News Dashboard</h3>
+              <span className="project-status">✓ Completed</span>
+            </div>
+            <div className="project-body">
+              <p>Built microservices architecture with 3 containerized services aggregating live sports scores, weather, and news data. Implemented Docker Compose orchestration with custom networking, health checks, and container lifecycle management.</p>
+              
+              <div className="project-metrics">
+                <div className="metric">
+                  <span className="metric-value">3</span>
+                  <span className="metric-label">Containers</span>
+                </div>
+                <div className="metric">
+                  <span className="metric-value">$0</span>
+                  <span className="metric-label">Cost</span>
+                </div>
+                <div className="metric">
+                  <span className="metric-value">Live</span>
+                  <span className="metric-label">Data APIs</span>
+                </div>
+              </div>
+
+              <div className="tech-stack-advanced">
+                <span className="tech-badge-advanced">Docker</span>
+                <span className="tech-badge-advanced">Docker Compose</span>
+                <span className="tech-badge-advanced">Python Flask</span>
+                <span className="tech-badge-advanced">Nginx</span>
+                <span className="tech-badge-advanced">Microservices</span>
+              </div>
+
+              <div className="project-footer">
+                <a href="https://github.com/vonongit/Docker-Sports-News-Dashboard" target="_blank" rel="noopener noreferrer" className="project-link-btn">
+                  View on GitHub →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 4 - AWS Portfolio Website */}
           <div className="project-card-advanced">
             <div className="project-header">
               <span className="project-number">03</span>
@@ -828,7 +869,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 4 - IAM Security Implementation */}
+          {/* Project 5 - IAM Security Implementation */}
           <div className="project-card-advanced">
             <div className="project-header">
               <span className="project-number">04</span>
