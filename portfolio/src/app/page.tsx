@@ -831,7 +831,7 @@ export default function Home() {
           {/* Project 4 - AWS Portfolio Website */}
           <div className="project-card-advanced">
             <div className="project-header">
-              <span className="project-number">03</span>
+              <span className="project-number">04</span>
               <h3>AWS Portfolio Website</h3>
               <span className="project-status">✓ Completed</span>
             </div>
@@ -872,7 +872,7 @@ export default function Home() {
           {/* Project 5 - IAM Security Implementation */}
           <div className="project-card-advanced">
             <div className="project-header">
-              <span className="project-number">04</span>
+              <span className="project-number">05</span>
               <h3>IAM Security Implementation</h3>
               <span className="project-status">✓ Completed</span>
             </div>
